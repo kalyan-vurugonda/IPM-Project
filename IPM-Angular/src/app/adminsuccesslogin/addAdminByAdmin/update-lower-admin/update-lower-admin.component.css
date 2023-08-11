@@ -1,0 +1,20 @@
+.container{
+      background-color: rgba(99, 243, 171, 0.352);
+      padding: 15px;
+      width:60%;
+      
+    }
+    label{
+     font-size: large;
+     font-weight: bold;
+     color:rgb(12, 66, 83);
+    }
+    input{
+      border-radius: 5px;
+      padding: 10px;
+      font-size: medium;
+    }
+    button{
+      size: 20px;
+    }
+    

@@ -1,0 +1,68 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="container" id="dashboard">
+    <div class="row mt-5"></div>
+    <div class="row" style="margin-left: 8em;">
+        <div class="col justify-content-evenly mb-5 mt-5  ">
+
+            <a class="nav-link col-md-2" routerLink="/viewPolicy">
+                <button class="text-center banner-text">
+                    <h5 style="color: blue;"><i class="bi bi-eye-fill"></i>&nbsp;View all policy</h5>
+                </button></a>
+
+            <a class="nav-link col-md-2" routerLink="/addPolicy">
+                <button class="text-center banner-text">
+                    <h5 style="color: peru;"><i class="bi bi-plus-circle-fill"></i>&nbsp;Add new policy</h5>
+
+
+                </button></a>
+
+            <a class="nav-link col-md-2" routerLink="/updatePolicy">
+                <button class="text-center banner-text">
+                    <h5 style="color: lightcoral;"><i class="bi bi-pencil-square"></i>&nbsp;Update policy</h5>
+
+
+                </button> </a>
+
+            <a class="nav-link col-md-2" routerLink="/deletePolicy">
+                <button class="text-center banner-text">
+                    <h5 style="color: red;"><i class="bi bi-trash-fill"></i>&nbsp;Delete policy</h5>
+
+
+                </button></a>
+
+
+        </div>
+        <div class="col justify-content-evenly mb-5 mt-5">
+
+            <a class="nav-link col-md-2" routerLink="/appliedUsers">
+                <button class="text-center  banner-text">
+                    <h5 style="color: brown;"><i class="bi bi-person-square"></i>&nbsp;Application List </h5>
+
+                </button></a>
+
+            <a class="nav-link col-md-2" routerLink="/approvedUsers">
+                <button class="text-center  banner-text">
+                    <h5 style="color: green;"><i class="bi bi-person-check-fill"></i>&nbsp;Total Approved Policies </h5>
+
+
+                </button> </a>
+
+            <a class="nav-link col-md-2" routerLink="/rejectedUsers">
+                <button class="text-center  banner-text">
+                    <h5 style="color: red;"><i class="bi bi-person-x-fill"></i>&nbsp;Total Disapproved Policies </h5>
+
+
+                </button></a>
+
+            <a class="nav-link col-md-2" href="/waitingUsers">
+                <button class="text-center banner-text">
+                    <h5 style="color: mediumvioletred;"><i class="bi bi-person-circle"></i>&nbsp;Total Applied Policies
+                    </h5>
+
+
+                </button></a>
+
+
+        </div>
+    </div>
+</div>

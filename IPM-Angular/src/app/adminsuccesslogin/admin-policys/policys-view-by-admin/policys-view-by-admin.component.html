@@ -1,0 +1,29 @@
+<app-adminnavbar></app-adminnavbar>
+
+<h1>First</h1>
+<div class="container">
+    <div class="row justify-content-center mb-5 mt-5">
+        <h2 class="text-primary mb-3 text-center">POLICY LIST<br><br></h2>
+        <table class="table table-striped shadow  smaller-table custom-table" style="background-color: whitesmoke;">
+            <thead>
+                <tr>
+                    <th scope="col">Policy ID</th>
+                    <th scope="col">Policy Name</th>
+                    <th scope="col">Policy Category</th>
+                    <th scope="col">Policy released date</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of allPolicyData">
+                    <th scope="row">{{p.pid}}</th>
+                    <td>{{p.policyname}}</td>
+                    <td>{{p.policycatagory}}</td>
+                    <td>{{p. addDateOfPolicy}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

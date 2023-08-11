@@ -1,0 +1,52 @@
+<app-navlogin></app-navlogin>
+
+<div class="container-fluid" id="dashboard">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-md-3 text-center">
+            <a class="nav-link" routerLink="/policies">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <i class="bi bi-plus-circle-fill icon"></i>
+                        <h5 class="card-title">Apply for Policies</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a class="nav-link" routerLink="/profile">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <i class="bi bi-pencil-square icon"></i>
+                        <h5 class="card-title">Update Your Profile</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="row" style="margin-left: -2em; margin-top: -13em;">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 text-center">
+                <a class="nav-link" routerLink="/history">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <i class="bi bi-eye-fill icon"></i>
+                            <h5 class="card-title">Check Policy Status</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 text-center" style="margin-left: 1em;">
+                <a class="nav-link" routerLink="/queries">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <i class="bi bi-envelope icon"></i>
+                            <h5 class="card-title">Contact with Admin</h5>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div><router-outlet></router-outlet></div>

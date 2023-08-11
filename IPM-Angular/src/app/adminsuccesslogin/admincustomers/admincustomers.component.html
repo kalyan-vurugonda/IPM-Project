@@ -1,0 +1,35 @@
+<app-adminnavbar></app-adminnavbar>
+<br><br><br>
+<div class="container">
+    <div class="row justify-content-center mb-5 mt-5">
+        <h2 class="text-success mb-3 text-center">REGISTERED CUSTOMER LIST<br><br></h2>
+        <table class="table table-striped shadow  smaller-table" style="background-color: whitesmoke;">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c1 of allCustomerData">
+                    <th scope="row">{{c1.cid}}</th>
+                    <td>{{c1.cname}}</td>
+                    <td>{{c1.cemail}}</td>
+                    <td>{{c1.cgender}}</td>
+                    <td>{{c1.cphno}}</td>
+                    <td>{{c1.caddress}}</td>
+
+                    <td><button class="btn btn-danger" (click)="deleteCustomer(c1.cid)"><i
+                                class="bi bi-trash-fill">&nbsp;Delete</i></button></td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+#policycatagory {
+    width: 20vw;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: aquamarine;
+}
+
+.custom-container {
+    max-width: 700px;
+
+    margin: 0 auto;
+    /* Center the container horizontally */
+}

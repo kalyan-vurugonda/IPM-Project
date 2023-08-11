@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col col-md-10">
+        <div class="content">
+          <div class="title" style="margin-left:4em; font-weight: bold;">Admin Login</div><br>
+          <img src="https://secure.webtoolhub.com/static/resources/icons/set141/2f70b744.png" alt="Rounded Image"
+            class="rounded-image" style="margin-left: 7em;">
+          <form (ngSubmit)="alogin()" class="grid-form">
+            <div class="input-box form-group mt-1 col-9 " style="margin-left:2em;">
+              <label class="details" style="font-weight:bold;" for="adminemail">Enter your Email</label>
+              <input type="text" placeholder="Enter your Email" required [(ngModel)]="admin.adminemail"
+                name="adminemail" id="adminemail" class="form-control mt-2 custom-input" />
+            </div>
+
+            <div class="input-box form-group mt-4 col-9" style="margin-left:2em;">
+              <label class="details" style="font-weight:bold;" for="adminpassword">Password</label>
+              <input type="password" placeholder="Enter your password" required [(ngModel)]="admin.adminpassword"
+                id="adminpassword" name="adminpassword" class="form-control mt-2 custom-input" />
+            </div>
+
+            <div class="button col-8" style="margin-left:2em;">
+              <input type="submit" value="Login" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</body>
+<app-footer></app-footer>

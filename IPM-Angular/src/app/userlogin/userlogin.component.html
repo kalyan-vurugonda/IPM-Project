@@ -1,0 +1,52 @@
+<app-nav></app-nav>
+<div class="box-form">
+  <div class="container">
+    <div class="text-center">
+      <div class="title text-dark">
+        <font size="+2" style="font-weight: bold;">User Login</font>
+        <!-- <h3 style="font-family: 'Times New Roman'; font-weight: bold;" class="title text-center text-success mb-5">User Registration</h3> -->
+      </div>
+    </div>
+    <br>
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/corporate-user-icon.png"
+      alt="Rounded Image" class="rounded-image" style="margin-left: 12em;">
+    <div class="content">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-9">
+          <form method="post" (ngSubmit)="userlogin()" class="text-center">
+            <div class="user-details">
+              <div class="col">
+                <div class="input-box form-group mt-1 col-2">
+                  <span class="details" style="font-weight:bold;">Enter your Email</span>
+                  <input type="email" placeholder="Enter your Email" required [(ngModel)]="user.cemail" id="cemail"
+                    name="cemail" />
+                </div>
+
+                <div class="input-box">
+                  <span class="details" style="font-weight:bold;">Password</span>
+                  <input type="password" placeholder="Enter your password" required [(ngModel)]="user.cpassword"
+                    id="cpassword" name="cpassword" />
+                </div>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" style="margin-left:3em" value="Login" class="btn btn-primary" />
+            </div>
+
+            <div class="content" style="margin-right: 10em;">
+              <p
+                style="font-size: large; font-weight: bold; font-family: Times New Roman, sans-serif; color: rgb(254, 255, 254);">
+                Create New Account?&nbsp;<button (click)="reg()" class="btn btn-secondary"
+                  style="width: 40%; height: 60%;">Registration</button>
+              </p>
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

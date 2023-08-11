@@ -1,0 +1,14 @@
+.banner-text {
+    background: linear-gradient(to bottom, rgb(235, 224, 224), whitesmoke);
+    /* Standard green gradient background */
+    width: 300px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Your Calligraphy Font', cursive;
+
+
+}

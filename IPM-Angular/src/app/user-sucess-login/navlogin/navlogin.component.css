@@ -1,0 +1,31 @@
+ a {
+   cursor: pointer;
+   text-decoration: none;
+ }
+
+ li,
+ a {
+   color: whitesmoke;
+   padding-top: 10px;
+   font-size: 18px;
+ }
+
+ li:hover{
+   /* background-color: rgb(160, 158, 158);  */
+   /* background-color:#84b8eb; */
+   background-color: #818385;
+   font-weight: bold;
+   padding-top: 5px 5PX;
+ }
+
+ .dropdown-item:hover {
+  background-color: gray; /* Change to your desired color */
+  color: #fff; /* Change to the text color you want */
+}
+ .rounded-image {
+   border-radius: 90%;
+   height: 40%;
+   width: 40%;
+ }
+
+ /*  */

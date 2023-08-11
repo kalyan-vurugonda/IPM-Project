@@ -1,0 +1,67 @@
+<app-adminnavbar></app-adminnavbar>
+
+
+
+<div class="container">
+    <app-add-admin-by-admin></app-add-admin-by-admin>
+    <div class="row justify-content-center mb-5 mt-5">
+        <h2 class="text mb-3 text-center">ADMIN LIST<br><br></h2>
+        <form>
+
+            <table class="table table-striped shadow  smaller-table" style="background-color: whitesmoke;">
+                <thead>
+                    <tr>
+                        <th scope="col"> Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">PhNo</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Address</th>
+
+
+                        <th scope="col">DOJ </th>
+                        <th scope="col">Delete Row </th>
+                        <th scope="col"> Update </th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let alist of admins">
+
+                        <th scope="row">{{alist.adminid}}</th>
+                        <td>{{alist.adminname}}</td>
+                        <td>{{alist.adminemail}}</td>
+                        <td>{{alist.adminphno}}</td>
+                        <td>{{alist.admingender}}</td>
+                        <td>{{alist.adminage}}</td>
+                        <td>{{alist.adminaddress}}</td>
+                        <td>{{alist.adminJoinDate}}</td>
+
+                        <td><button class="btn btn-danger " style="margin-top: 0.4em;"
+                                (click)="delete(alist.adminid)"><i class="bi bi-trash-fill">&nbsp;Delete</i></button>
+                        </td>
+
+                        <td><a class="nav-link col-md-3" style="width: 100%; "><button class="btn btn-success"
+                                    style="width: 100%; "
+                                    (click)="updateLowerAdmin(alist.adminid,alist.adminname,alist.adminemail,alist.adminphno,alist.admingender,alist.adminaddress,alist.adminage,alist.adminpassword)"><i
+                                        class="bi bi-pencil-square">&nbsp;Update</i></button></a></td>
+
+
+                    </tr>
+
+                </tbody>
+
+
+
+            </table>
+        </form>
+
+
+
+    </div>
+
+</div>

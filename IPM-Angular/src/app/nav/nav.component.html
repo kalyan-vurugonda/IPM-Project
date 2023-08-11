@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark " id="nav">
+  <div class="container-fluid">
+
+    <!-- <a routerLink="" class="navbar-brand"
+      style="color: rgb(237, 238, 240); font-family: Times New Roman, Arial, Helvetica, sans-serif;"><b>Insurance
+        Policy Management
+        System</b></a> -->
+
+    <a routerLink="" class="navbar-brand"
+      style="color: rgb(237, 238, 240); font-family: Times New Roman, Arial, Helvetica, sans-serif; margin-right: 10%;">
+      <img src="assets/favicon.png" alt="favicon-image" style="height: 30px; width:35px">
+      <b> Insurance Policy Management System</b>
+    </a>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+        <a class="nav-link active" aria-current="page" routerLink="">HOME</a>
+        <a class=" nav-link" (click)="about()" style="cursor: pointer;">ABOUT</a>
+        <a class="nav-link" (click)="services()" style="cursor: pointer;">SERVICES</a>
+        <a class="nav-link col-md-5" (click)="contactus()" style="cursor: pointer;">CONTACT US</a>
+
+      </div>
+
+      <div class="collapse navbar-collapse " id="login">
+        <button type="button" class="btn btn-dark" (click)="ulog()">User Login</button>
+        <button type=" button" class="btn btn-dark" id="adminbtn" (click)="alog()">Admin Login</button>
+      </div>
+
+    </div>
+  </div>
+
+</nav>
