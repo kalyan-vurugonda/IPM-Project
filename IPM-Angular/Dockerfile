@@ -15,12 +15,14 @@ COPY . .
 
 # Build the Angular app
 RUN npm run build --prod
+RUN npm cache clean --force
 
 # Use a smaller nginx image to serve the Angular app
-FROM nginx:latest-alpine as prod
+# FROM nginx:latest-alpine 
+FROM nginx:alpine as prod
 
 # Copy the built Angular app from the previous stage to the nginx web root
-COPY --from=build /usr/src/app/dist/ipm-angular-app /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/angular-app /usr/share/nginx/html
 
 # Expose port 80 to serve the Angular app
 EXPOSE 80
