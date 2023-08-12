@@ -1,0 +1,76 @@
+<app-adminnavbar></app-adminnavbar>
+
+<app-add-admin-by-admin></app-add-admin-by-admin>
+<br><br><br><br><br><br>
+<div class="box-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-9">
+        <div class="title">Admin Registration</div>
+        <form (ngSubmit)="AdminReg()">
+          <br>
+          <div class="content">
+            <div>
+              <div class="user-details">
+                <img src="https://secure.webtoolhub.com/static/resources/icons/set141/2f70b744.png" alt="Rounded Image"
+                  class="rounded-image" style="margin-left: 4em;">
+                <div class="input-box">
+                  <span class="details">Full Name</span>
+                  <input type="text" placeholder="Enter your name" requied [(ngModel)]="admin.adminname" id="adminname"
+                    name="adminname">
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Email</span>
+                  <input type="text" placeholder="Enter your email" required [(ngModel)]="admin.adminemail"
+                    id="adminemail" name="adminemail">
+                </div>
+                <div class="input-box">
+                  <span class="details">Phone Number</span>
+                  <input type="text" placeholder="Enter  number" required [(ngModel)]="admin.adminphno" id="adminphno"
+                    name="adminphno">
+                </div>
+                <div class="input-box">
+                  <span class="details">Password</span>
+                  <input type="text" placeholder="Enter  password" required [(ngModel)]="admin.adminpassword"
+                    id="adminpassword" name="adminpassword">
+                </div>
+
+                <div class="input-box">
+                  <span class="details">Address</span>
+                  <input type="text" placeholder="Enter your Address" required [(ngModel)]="admin.adminaddress"
+                    id="adminaddress" name="adminaddress">
+                </div>
+                <div class="input-box">
+                  <span class="details">Age</span>
+                  <input type="text" placeholder="Enter your Age" [(ngModel)]="admin.adminage" id="adminage"
+                    name="adminage">
+                </div>
+                <div class="input-box">
+                  <span class="details">Gender</span>
+
+                  <select name="users" [(ngModel)]="admin.admingender" id="admingender" name="admingender">
+                    <option value="">--Select Gender</option>
+                    <option value="MALE">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="NA">Other</option>
+                  </select>
+                </div>
+
+              </div>
+
+
+              <div class="button">
+                <br>
+                <input type="submit" value="Add Admin">
+
+
+
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,38 @@
+<app-adminnavbar></app-adminnavbar>
+
+<h1>First</h1>
+<div class="container">
+    <div class="row justify-content-center mb-5 mt-5">
+        <h2 class="text-danger mb-3 text-center">REJECTED LIST<br><br></h2>
+        <table class="table table-striped shadow  smaller-table" style="background-color: whitesmoke;">
+            <thead>
+                <tr>
+                    <th scope="col">Application ID</th>
+                    <th scope="col">Policy Name</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Policy Price</th>
+                    <th scope="col">Applied date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a1 of allRejectedData">
+                    <th scope="row">{{a1.appid}}</th>
+                    <td>{{a1.policyName}}</td>
+                    <td>{{a1.customername}}</td>
+                    <td>{{a1.policyPrice}}</td>
+                    <td>{{a1.policyapplydate}}</td>
+                    <td>{{a1.status}}</td>
+                    <td></td>
+                    <td><button class="btn btn-danger" (click)="deleteRejected(a1.appid)"><i
+                                class="bi bi-trash-fill">&nbsp;Delete</i></button></td>
+
+
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

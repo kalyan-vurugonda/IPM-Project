@@ -1,0 +1,49 @@
+<app-nav></app-nav>
+
+<h1 class="text-dark text-center"
+  style="padding: 10px; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Contact With Us</h1>
+<div class="main">
+
+  <div class="row justify-content-evenly pt-2 pb-4 " id="contact">
+    <div class="col-md-5 mt-5">
+      <h3 class="mb-3" style="text-align: center;">Contact Form</h3>
+      <form (ngSubmit)="sendSms()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nameHelp"
+            [(ngModel)]="u.ucustomername" name="ucustomername" id="ucustomername" />
+          <div id="nameHelp" class="form-text">
+            We'll never share your name with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email Address</label>
+          <input type="email" [(ngModel)]="u.usmsemail" name="usmsemail" id="usmsemail" class="form-control"
+            id="exampleInputEmail1" aria-describedby="emailHelp" />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="u.sms" name="sms"
+            id="sms" placeholder="write your message.."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mx-5">Submit</button>
+
+        <button type="reset" class="btn btn-warning mx-3">Reset</button>
+      </form>
+    </div>
+    <div class="col-md-5 mt-5">
+      <h3 class="mb-3">Address</h3>
+      <p>
+        <i class="bi bi-geo-alt"></i>
+        <span class="address-line">1234 Elm Street, Suite 567<br />Maple Plaza, Springfield, Cityville
+          State-12345.</span><br />
+        <i class="bi bi-telephone"></i>
+        123-456-7890
+      </p>
+
+    </div>
+  </div>
+  <app-footer></app-footer>

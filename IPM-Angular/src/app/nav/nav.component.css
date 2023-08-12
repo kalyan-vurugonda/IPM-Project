@@ -1,0 +1,25 @@
+#nav {
+      /* background-image: linear-gradient(140deg, #000000 0%, #BC70A4 50%, #BFD641 75%); */
+      background-image: linear-gradient(140deg, #97988e 0%, #080808 50%, #97988e 70%);
+      padding: 10px;
+}
+
+ a {
+      font-size: large;
+      font-family: sans-serif;
+      cursor: pointer;
+
+}
+
+.nav-link {
+      margin-right: 30px;
+}
+
+#login {
+      margin-left: 250px;
+}
+
+#adminbtn {
+      margin-left: 20px;
+
+}

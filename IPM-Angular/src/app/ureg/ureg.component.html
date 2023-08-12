@@ -1,0 +1,105 @@
+<app-nav></app-nav>
+<div>
+
+  <div class="box-form">
+
+    <div class="container">
+      <h3 class="title text-center text-dark mb-3" style="font-weight: bold;">User Registration</h3>
+      <img src="https://cdn-icons-png.flaticon.com/512/2019/2019442.png" alt="Rounded Image" class="rounded-image"
+        style="margin-left: 13em;">
+      <form (ngSubmit)="UserReg()">
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+
+            <label class="form-label">Full Name</label>
+          </div>
+
+          <div class="col-md-2">
+            <input classd="form-control" type="text" placeholder="Enter your name" requied [(ngModel)]="user.cname"
+              id="cname" name="cname">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Email</label>
+          </div>
+          <div class="col-md-2">
+            <input classd="form-control" type="email" placeholder="Enter your email" required [(ngModel)]="user.cemail"
+              id="cemail" name="cemail">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Phone Number</label>
+          </div>
+          <div class="col-md-2">
+            <input classd="form-control" type="text" placeholder="Enter your number" required [(ngModel)]="user.cphno"
+              id="cphno" name="cphno">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Password</label>
+          </div>
+          <div class="col-md-2">
+            <input classd="form-control" type="password" placeholder="Enter your password" required
+              [(ngModel)]="user.cpassword" id="cpassword" name="cpassword">
+          </div>
+        </div>
+
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Address</label>
+          </div>
+          <div class="col-md-2">
+            <input classd="form-control" type="text" placeholder="Enter your address" required
+              [(ngModel)]="user.caddress" id="caddress" name="caddress">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Age</label>
+          </div>
+          <div class="col-md-2">
+
+            <input classd="form-control" type="text" placeholder="Enter your age" [(ngModel)]="user.cage" id="cage"
+              name="cage">
+          </div>
+        </div>
+
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-2">
+            <label class="form-label">Gender</label>
+          </div>
+          <div class="col-md-2">
+
+            <select [(ngModel)]="user.cgender" id="cgender" name="cgender">
+              <option value="" selected>--Select--</option>
+              <option value="MALE">Male</option>
+              <option value="Female">Female</option>
+              <option value="NA">Prefer Not to Say</option>
+            </select>
+          </div>
+
+
+        </div>
+        <div class="col-md-12 text-center">
+          <button text-center type="submit" class=" text-center btn btn-success">REGISTER</button>
+
+        </div>
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+  <app-footer></app-footer>

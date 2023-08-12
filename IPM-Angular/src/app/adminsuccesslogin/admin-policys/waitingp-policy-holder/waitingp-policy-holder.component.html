@@ -1,0 +1,34 @@
+<app-adminnavbar></app-adminnavbar>
+
+<h1>First</h1>
+<div class="container">
+    <div class="row justify-content-center mb-5 mt-5">
+        <h2 class="text-primary mb-3 text-center">TOTAL POLICY LIST<br><br></h2>
+        <table class="table table shadow  smaller-table" style="background-color: whitesmoke;">
+            <thead>
+                <tr>
+                    <th scope="col">Application ID</th>
+                    <th scope="col">Policy Name</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Applied date</th>
+                    <th scope="col">Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a1 of allApplyData">
+                    <th scope="row">{{a1.appid}}</th>
+                    <td>{{a1.policyName}}</td>
+                    <td>{{a1.customername}}</td>
+                    <td>{{a1.policyapplydate}}</td>
+                    <td [ngClass]="{'Approved': a1.status === 'Approved', 'Rejected': a1.status === 'Rejected'}">
+                        {{a1.status}}</td>
+
+
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

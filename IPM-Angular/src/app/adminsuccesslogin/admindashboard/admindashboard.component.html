@@ -1,0 +1,62 @@
+<app-adminnavbar></app-adminnavbar>
+<h1>First</h1>
+<div class="container " id="dashboard">
+    <div class="row justify-content-evenly mb-5 mt-5">
+
+        <div class="text-center col-md-2 banner-text shadow ">
+            <h5>Total Registered<br>Users</h5>
+            <h2><i class="bi bi-people-fill"></i> {{countcustomer}}</h2>
+
+        </div>
+
+        <div class="text-center col-md-2 banner-text shadow  ">
+            <h5>Listed Policies</h5>
+            <h2><i class="bi bi-bag-check"></i> {{countpolicie}}</h2>
+        </div>
+
+        <div class="text-center col-md-2 banner-text">
+            <h5>Public Enqueries</h5>
+            <h2><i class="bi bi-card-list"></i> {{ unknownsmscount}}</h2>
+        </div>
+
+        <div class="text-center col-md-2 banner-text">
+            <h5>Total Customer Questions</h5>
+            <h2><i class="bi bi-question-circle"></i> {{countCustomerQuestions}}</h2>
+        </div>
+
+
+    </div>
+
+    <div class="row justify-content-evenly">
+        <div class="text-center col-md-2 banner-text">
+            <h5>Total Applied <br>Policies</h5>
+            <h2><i class="bi bi-person-square"></i> {{ countapllication}}</h2>
+        </div>
+
+        <div class="text-center col-md-2 banner-text">
+            <h5>Total Approved <br>Policies</h5>
+            <h2><i class="bi bi-person-check-fill"></i> {{ countApprove}}</h2>
+        </div>
+
+        <div class="text-center col-md-2 banner-text">
+            <h5>Total Disapproved <br>Policies</h5>
+            <h2><i class="bi bi-person-x-fill"></i> {{ countrejected}}</h2>
+        </div>
+
+        <div class="text-center col-md-2 banner-text">
+            <h5>Waiting For Approval</h5>
+            <h2><i class="bi bi-person-circle"></i> {{ countPending}}</h2>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="row justify-content-evenly mb-5 mt-5"></div>
+    <div class="row justify-content-evenly mb-5 mt-5"></div>
+    <div class="row justify-content-evenly mb-5 mt-5"></div>
+    <div class="row justify-content-evenly mb-5 mt-5"></div>
+</div>
+
+<router-outlet></router-outlet>

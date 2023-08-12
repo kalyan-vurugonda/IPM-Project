@@ -1,0 +1,121 @@
+<div class="sidebar-nav">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <button class="btn btn-dark" type="button" (click)="goBack()"><i class="bi bi-reply-fill">&nbsp;Go
+                Back</i></button>
+
+        <div class="container">
+            <!-- Mobile Menu Toggle Button -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" style="margin-left: -2em;">
+                <span class="navbar-toggler-icon"></span>
+                Menu
+            </button>
+            <span class="text-light" (click)="dashboard()" style="cursor: pointer"><i class="bi bi-person"></i> ADMIN
+                DASHBOARD</span>
+
+            <!-- Menus List -->
+
+            <div class="bg-dark offcanvas offcanvas-start shadow" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="width: 300px;">
+
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav">
+                        <div class="container">
+                            <img src="https://www.pngitem.com/pimgs/m/130-1300253_female-user-icon-png-download-user-image-color.png"
+                                alt="Rounded Image" class="rounded-image" style="margin-left: 4em;margin-bottom: 1em;">
+
+                        </div>
+                        <li> <span class="item-white shadow" style="margin-left: 6em;">ADMIN</span></li>
+                        <li></li>
+                        <br>
+                        <li>
+                            <a (click)="dashboard()">
+                                <i class="bi bi-speedometer2"></i>
+                                &nbsp;
+                                <span class="item-text">Dashboard</span>
+                            </a>
+                            <hr class="divider bg-light">
+                        </li>
+
+                        <li>
+                            <a (click)="admincustomers()">
+                                <i class="bi bi-person-circle"></i>
+                                &nbsp;
+
+                                <span class="item-text">Customer</span>
+                            </a>
+                            <hr class="divider bg-light">
+                        </li>
+
+                        <li>
+                            <a (click)="adminunknown()">
+                                <i class="bi bi-person-x-fill"></i>
+                                &nbsp;
+
+                                <span class="item-text">Public Enqueries</span>
+                            </a>
+                            <hr class="divider bg-light">
+                        </li>
+
+                        <li>
+                            <a (click)="adminPolicys()">
+                                <i class="bi bi-file-earmark-text"></i>
+                                &nbsp;
+
+                                <span class="item-text">Policy</span>
+                            </a>
+                            <hr class="divider bg-light">
+                        </li>
+
+                        <li>
+                            <a (click)="adminQuery()">
+                                <i class="bi bi-question-circle"></i>
+                                &nbsp;
+                                <span class="item-text">Questions</span>
+                            </a>
+                            <hr class="divider bg-light">
+                        </li>
+
+                        <li>
+                            <a (click)="newadmin()">
+                                <i class="bi bi-person-plus"></i>
+                                &nbsp;
+                                <span class="item-text">Add New Admin</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="btn-group ">
+
+                <a href="#" class="dropdown-toggle text-white text-decoration-none" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+
+                    <span class="textnone"> Welcome {{adminname}}</span>
+
+                </a>
+
+                <ul class="bg-dark dropdown-menu dropdown-menu-end">
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <button class="dropdown-item text-light font-weight-bold shadow" type="button"
+                            (click)="logout()">Logout</button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+</div>

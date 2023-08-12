@@ -1,0 +1,40 @@
+<app-adminnavbar></app-adminnavbar>
+<br><br> <br><br>
+<h1 style="text-align: center; color:green" class="bi-file-earmark-text">&nbsp;UPDATE POLICY</h1>
+<div class="container mt-5 custom-container">
+    <div class="row justify-content-center">
+        <div class="card shadow smaller-card">
+            <div class="card-body">
+                <form (ngSubmit)="UpdateNow()">
+                    <div class="mb-3 row">
+                        <label for="policycatagory" class="col-md-3 col-form-label">Choose Category:</label>
+                        <div class="col-md-9">
+
+                        <select [(ngModel)]="updateData.policycatagory" name="policycatagory" id="policycatagory" class="form-control">
+                            <option [ngValue]="'Life Insurance'">Life Insurance</option>
+                            <option [ngValue]="'Travel Insurance'">Travel Insurance</option>
+                            <option [ngValue]="'Vehicle Insurance'">Vehicle Insurance</option>
+                            <option [ngValue]="'Health Insurance'">Health Insurance</option>
+                        </select>
+                        </div>
+                    </div>
+
+                 
+                    <div class="mb-3 row">
+                        <label for="policyname" class="col-md-3 col-form-label">Policy Name:</label>
+                        <div class="col-md-9">
+                            <input [(ngModel)]="updateData.policyname" name="policyname"
+                                placeholder="Enter new policy name" id="policyname" type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+
+                    <div class="mb-3 row justify-content-center">
+                        <button type="submit" class="btn btn-primary" style="max-width: 200px;">Update Policy</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

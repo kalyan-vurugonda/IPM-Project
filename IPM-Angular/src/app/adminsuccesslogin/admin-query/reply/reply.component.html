@@ -1,0 +1,29 @@
+<app-adminnavbar></app-adminnavbar>
+<br>
+<br><br>
+<div class="container">
+  <div class="row mt-5">
+    <div class="card shadow-sm" style="background-color: white; padding: 20px;">
+      <form (ngSubmit)="sendAns()">
+        <div class="mb-3">
+          <i class="bi bi-reply large"></i>&nbsp;
+
+          <label for="FormControl" class="form-label text-secondary" style="font-weight: 600; font-size: large;">REPLY
+            USER</label>
+          <div class="row">
+            <div class="col-md-9">
+              <textarea class="form-control" type="text" id="qanswer" name="qanswer" rows="3"
+                [(ngModel)]="questions.qanswer"></textarea>
+            </div>
+            <div class="col-md-2">
+              <button type="submit" class="btn btn-primary">REPLY</button>
+
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

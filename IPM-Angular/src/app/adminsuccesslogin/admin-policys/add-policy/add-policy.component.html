@@ -1,0 +1,47 @@
+<app-adminnavbar></app-adminnavbar>
+<br><br> <br><br>
+<h1 style="text-align: center; color:palevioletred" class="bi-file-earmark-text">&nbsp;ADD POLICY</h1>
+<div class="container mt-5 custom-container">
+    <div class="row justify-content-center">
+        <div class="card shadow smaller-card">
+            <div class="card-body">
+                <form (ngSubmit)="addNow()">
+
+                    <div class="mb-3 row">
+                        <label for="policycatagory" class="col-md-3 col-form-label">Choose Category:</label>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <select [(ngModel)]="addData.policycatagory" name="policycatagory" id="policycatagory"
+                                    class="form-control" style="background-color: white;">
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="Life Insurance">Life Insurance</option>
+                                    <option value="Travel Insurance">Travel Insurance</option>
+                                    <option value="Vehicle Insurance">Vehicle Insurance</option>
+                                    <option value="Health Insurance">Health Insurance</option>
+                                </select>
+                             
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3 row">
+                        <label for="policyname" class="col-md-3 col-form-label">Add Policy Name</label>
+                        <div class="col-md-9">
+                            <input [(ngModel)]="addData.policyname" name="policyname" id="policyname" type="text"
+                                class="form-control" placeholder="Enter name of the policy">
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3 row justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-block" style="max-width: 200px;">Add
+                            Policy</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>

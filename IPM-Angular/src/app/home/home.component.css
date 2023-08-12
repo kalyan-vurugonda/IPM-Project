@@ -1,0 +1,35 @@
+.custom-container {
+      /* background-color: #feffff; */
+      padding: 10px;
+}
+
+.container {
+      text-align: center;
+      /* background-color: #feffff; */
+}
+
+/* Update styles for the heading */
+.welcome-heading {
+      color: rgb(4, 4, 4);
+      text-align: center;
+      background-color: #a0a4a57d;
+      font-family: "Algerian",'Times New Roman', Cambria, Cochin, Georgia, Times, serif;
+      font-weight: bold;
+      padding: 10px 0;
+      /* Adjust padding as needed */
+}
+
+/* Style for the image container */
+.image-container {
+      position: relative;
+      width: 100%;
+      overflow: auto;
+      background-color: #070707;
+
+}
+
+/* Style for the image */
+.img {
+      width: 100%;
+      height: 600px;
+}

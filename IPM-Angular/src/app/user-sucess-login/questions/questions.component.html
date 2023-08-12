@@ -1,0 +1,66 @@
+<app-navlogin></app-navlogin>
+<br>
+
+<div class="container mt-5 shadow">
+    <div class="row justify-content-center mt-2">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <form><br>
+                <h2 class="text-center" style="color:1b0b3a; font-weight: 400; color: rosybrown;">
+                    ASK YOUR QUESTION <br>
+                </h2>
+                <div class="mb-3">
+                    <small for="qtopic" class="form-label text-secondary">Question Topic</small>
+                    <input type="text" placeholder="Enter your topic" class="form-control col-6" id="qtopic"
+                        [(ngModel)]="q.qtopic" name="qtopic" />
+                </div>
+                <div class="mb-3">
+                    <small for="qdetails" class="form-label text-secondary">Describe in brief</small>
+                    <input type="text" placeholder="Describe Here" class="form-control" id="qdetails"
+                        [(ngModel)]="q.qdetails" name="qdetails" />
+                </div>
+                <button (click)="sendQ()" type="submit" class="btn btn-warning" style="margin-left: 13em;">ASK</button>
+            </form>
+        </div>
+    </div>
+
+
+    <br>
+
+    <h2 class="text-center" style="color:palevioletred; font-weight: 400; ">
+        HISTORY
+    </h2>
+
+
+    <div class="container" style="margin-top: -1em;">
+        <div class="row justify-content-center mb-5 mt-5" style="background-color:lightgrey">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">QUERY ID</th>
+                        <th scope="col">QUERY TOPIC</th>
+                        <th scope="col">QUERY DETAILS</th>
+                        <th scope="col">QUERY DATE</th>
+                        <th scope="col">REPLY</th>
+                        <th scope="col">REPLY DATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of sms">
+                        <td><span>{{ s.qid }}</span></td>
+                        <td><span>{{ s.qtopic }}</span></td>
+                        <td><span>{{ s.qdetails }}</span></td>
+                        <td><span>{{ s.qdate }}</span></td>
+                        <td><span>{{ s.qanswer }}</span></td>
+                        <td><span>{{ s.answerdate }}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+    </div>
+</div>
+
+
+<br><br>

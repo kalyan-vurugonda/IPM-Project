@@ -1,0 +1,95 @@
+<app-adminnavbar></app-adminnavbar>
+<br><br><br><br>
+
+<div class="container card shadow" style="background-color: white;">
+  <div class="row justify-content-center">
+    <div class="card-body">
+      <h3 class="title text-center text-success mb-5"> 
+        <i class="bi bi-pencil-fill"></i>
+        UPDATE ADMIN DETAILS</h3>
+      <form (ngSubmit)="updateLowerAdmin()">
+
+        <div class="row justify-content-center mb-2 align-items-center">
+          <div class="col-md-3">
+            <label class="form-label">Full Name</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="{{naname}}" required [(ngModel)]="lad.adminname"
+              id="adminname" name="adminname" value="{{naname}}">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Email</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="{{naemail}}" required [(ngModel)]="lad.adminemail"
+              id="adminemail" name="adminemail">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Phone Number</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="{{naphno}}" required [(ngModel)]="lad.adminphno"
+              id="adminphno" name="adminphno">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Password</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="" required [(ngModel)]="lad.adminpassword"
+              id="adminpassword" name="adminpassword">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Address</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="{{naaddress}}" required [(ngModel)]="lad.adminaddress"
+              id="adminaddress" name="adminaddress">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Age</label>
+          </div>
+          <div class="col-md-4">
+            <input class="form-control" type="text" placeholder="{{naage}}" [(ngModel)]="lad.adminage" id="adminage"
+              name="adminage">
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-3">
+            <label class="form-label">Gender</label>
+          </div>
+          <div class="col-md-4">
+            <select [(ngModel)]="lad.admingender" id="admingender" name="admingender">
+              <option value="">--Select--</option>
+              <option value="MALE">Male</option>
+              <option value="Female">Female</option>
+              <option value="NA">Prefer Not to Say</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-2">
+          <div class="col-md-7 text-center">
+            <input class="btn btn-success mt-3" type="submit" value="Update" style="width: 50%;">
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
