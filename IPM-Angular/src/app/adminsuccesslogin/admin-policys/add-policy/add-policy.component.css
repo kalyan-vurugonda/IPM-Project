@@ -1,9 +1,7 @@
 #policycatagory {
-    width: 20vw;
+    width: 100%;
     padding: 5px;
     border-radius: 5px;
-    margin-left: 10px;
-    background-color: aquamarine;
 }
 
 .custom-container {
