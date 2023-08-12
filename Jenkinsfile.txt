@@ -1,0 +1,80 @@
+// Jenkins Pipeline Code - To Checkout Code from GitHub, Building Images, Running Containers, Pushing Images to Docker Hub
+
+
+pipeline {
+    
+     agent any 
+     
+     tools {
+        maven "Maven"
+     }
+    
+      stages {
+          
+        stage('Checkout from GitHub') {
+            steps {
+                // Checkout the code from the GitHub repository
+                git branch: 'main', url: "https://github.com/kalyan-vurugonda/IPM-Project"
+            }
+        }
+    
+         stage('Build Spring Boot') {
+            steps {
+                dir('IPM-SpringBoot/') {
+                // Build the Spring Boot application
+                bat 'mvn -Dmaven.test.skip=true clean package'
+                }
+            }
+        }  
+        
+        stage('Build Angular') {
+            steps {
+                // Install Angular CLI no need as your system has it already
+                
+                // Build the Angular application
+                dir('IPM-Angular/') {
+                    bat 'npm install'
+                    bat 'npm run ng -- build'
+                }
+            }
+        }
+
+        stage('Build Docker Images') {
+            steps {
+                // Build Docker images for Spring Boot and Angular apps
+                bat 'docker build -t spring-boot-app ./IPM-SpringBoot'
+                bat 'docker build -t angular-app ./IPM-Angular'
+            }
+        }
+        
+        stage('Run Docker Containers') {
+            steps {
+                // Run Docker containers for Spring Boot and Angular apps
+                bat 'docker run -d -p 8080:8080 spring-boot-app'
+                bat 'docker run -d -p 80:80 angular-app'
+            }
+        }
+    
+        stage('Push Docker Images to Hub') {
+            steps {
+                // Tag the Docker image with your Docker Hub username and repository name
+                bat "docker tag spring-boot-app vurugondakalyan811/spring-boot-app"
+                bat "docker tag angular-app vurugondakalyan811/angular-app"
+                
+                // Log in to Docker Hub using your credentials
+                // Make sure to replace 'your_docker_username', 'your_docker_password', and 'your_docker_email' with appropriate values
+                bat "docker login -u vurugondakalyan811 -p Kalyan@28042001"
+                
+                // Push the Docker image to Docker Hub
+                bat "docker push vurugondakalyan811/spring-boot-app"
+                bat "docker push vurugondakalyan811/angular-app"
+                
+                // Log out from Docker Hub (optional but recommended)
+                bat "docker logout"
+            }
+        }   
+
+        
+        
+      }
+}
