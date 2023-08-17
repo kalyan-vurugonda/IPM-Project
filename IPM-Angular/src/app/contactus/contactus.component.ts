@@ -20,7 +20,7 @@ export class ContactusComponent implements OnInit {
   sendSms() {
 
 
-    if (this.u.sms === undefined || this.u.ucustomername === undefined || this.u.usmsemail === undefined) {
+    if (this.u.sms === '' || this.u.ucustomername === '' || this.u.usmsemail === '') {
 
       Swal.fire({
         icon: 'error',

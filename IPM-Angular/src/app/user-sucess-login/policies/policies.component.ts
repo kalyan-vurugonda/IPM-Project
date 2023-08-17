@@ -128,7 +128,7 @@ export class PoliciesComponent implements OnInit {
 
         icon: 'error',
         title: 'Already Applied',
-        text: ' Wait for Admin Action 👨',
+        text: ' Wait for Admin Action',
 
       })
       setTimeout(() => {

@@ -28,63 +28,72 @@ export class ProfileComponent implements OnInit {
       this.user.cage = responce?.cage; // Use optional chaining in case 'response' is null
 
     });
-    
+
 
 
 
 
   }
- 
+
 
   updateService() {
-    if (!this.user.cemail || !this.user.cemail.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
+
+    if (!this.user.cname || !this.user.cphno || !this.user.caddress || !this.user.cage || !this.user.cgender) {
       Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Please enter a valid email.',
+        title: 'Oops..',
+        text: 'fill up all field.',
       });
     }
-     else {
+    else
+      if (!this.user.cemail || !this.user.cemail.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please enter a valid email.',
+        });
+      }
+      else {
 
-      Swal.fire({
-        title: 'Do you want to save the changes?',
-        showDenyButton: true,
-        showCancelButton: true,
-        confirmButtonText: 'Save',
-        denyButtonText: `Don't save`,
-      }).then((result) => {
+        Swal.fire({
+          title: 'Do you want to save the changes?',
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: 'Save',
+          denyButtonText: `Don't save`,
+        }).then((result) => {
 
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
 
-          //Send Data
-          this.userservice.UpdtaeUser(this.user, this.email).subscribe((update => {
-
-
-
-            //this.roter.navigate(['ulog'])
-          }), error => {
-            
-
-            console.warn(this.user.cemail);
-            this.roter.navigate(['udashboard'])
-
-
-          })
-
-          //Show Alerrt
-
-          Swal.fire('Saved!', '', 'success')
-
-        } else if (result.isDenied) {
-
-          Swal.fire('Changes are not saved', '', 'info')
-        }
-      })
+            //Send Data
+            this.userservice.UpdtaeUser(this.user, this.email).subscribe((update => {
 
 
 
-    }
+              //this.roter.navigate(['ulog'])
+            }), error => {
+
+
+              console.warn(this.user.cemail);
+              this.roter.navigate(['udashboard'])
+
+
+            })
+
+            //Show Alerrt
+
+            Swal.fire('Saved!', '', 'success')
+
+          } else if (result.isDenied) {
+
+            Swal.fire('Changes are not saved', '', 'info')
+          }
+        })
+
+
+
+      }
 
 
   }
